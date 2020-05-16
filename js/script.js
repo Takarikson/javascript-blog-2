@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /* [DONE] - function titleClickHandler */
 function titleClickHandler(event) {
   /* remove class 'active' from all article links  */
@@ -46,9 +46,9 @@ function generateTitleLinks() {
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     /* insert link into titleList */
     titleList.innerHTML = titleList.innerHTML + linkHTML;
-    /*OTHER OPTION*/
+    /*---------------------- OTHER OPTION ----------------------*/
     /* OPTION - titleList.insertAdjacentHTML('beforebegin', linkHTML);*/
-    /*OTHER OPTION*/
+    /*---------------------- OTHER OPTION ----------------------*/
     /* insert link into html variable */
     html = html + linkHTML;
   }
@@ -56,9 +56,10 @@ function generateTitleLinks() {
 }
 generateTitleLinks();
 
-const links = document.querySelectorAll(".titles a");
+const links = document.querySelectorAll('.titles a');
 console.log(links);
 
 for (let link of links) {
-  link.addEventListener("click", titleClickHandler);
+  link.addEventListener('click', titleClickHandler);
 }
+
